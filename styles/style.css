@@ -8,18 +8,21 @@
 
 header{
      
-    width: 320px;
+    width: 100%;
     height: 568px;
     margin: 0px;
     position: relative;
     
     
 }
+
+/*ajustar pic mobile size*/
+
 .imgcover{
-    background-image: url(./images/cover.jpg);
+    background-image: url(../images/cover.jpg);
     background-position: center;
     background-size: cover;
-    
+    width: 100%;
 }
 .imgmenu{
      background-color: rgb(23, 23, 206);
@@ -35,13 +38,14 @@ header{
 
 .header{
     
-    width: 300px;
+    width: 100%;
     height: 200px;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding-top: 250px;
+    
     
 }
 
@@ -51,7 +55,7 @@ header{
     font-family:'Roboto Slab', serif ;
     font-size: 42px;
     text-align: center;
-  
+    
 
 }
 .p1{
@@ -67,12 +71,15 @@ header{
     background-color:white;
     width: 45px;
     height: 45px;
-    margin-left: 138px;
+    margin-left: 47%;
     margin-right: 137px;
     margin-top: 50px;
     border-radius: 100%;
 }
 
+    
+        
+    
 
 /*section */
 
@@ -80,69 +87,71 @@ header{
 
 section{
 
-    width: 320px;
-    height: 376px;
+    width: 100%;
     margin-bottom: 40px;
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+    align-items: center;
+    
+
+  /*arreglar phone size desborda*/  
 
 
 }
 .p1insection{
    
-    width: 90px;
+    
     height: 30px;
     font-family: 'Roboto Slab', serif;
     font-size: 16px;
     color: lightblue;
-    padding-left: 15px;
-    padding-right: 200px;
     margin: 0px;
     padding-top: 35px;
     text-align: center;
+    
     
 
 }
 
 .h3section{
      
-     width: 290px;
-     height: 62px;
-     padding-left: 15px;
+     width: 100%;
      font-size: 30px;
      color: #000;
      line-height: 30px;
      font-family:'Roboto Slab', serif ;
      margin-top: 15px;
-  
+     text-align:center ;
+    
 
 }
 
 .p2insection{
-
-    margin-left: 0;
-    display: block;
-    width: 290px;
-    height: 120px;
-    padding-left: 15px;
-    padding-right: 15px;
+    
     padding-bottom: 3px;
     font-family:'Roboto Slab', serif ;
     font-size: 20px;
-    color:#2c2a2a4646;
-    line height: 30px;
+    color:black;
+    line-height: 30px;
+    text-align: center;
+    width: 400px;
+ 
 
 }
 
 button{
-     margin: 15px;
+     
      width: 76px;
-     height: 45px; 
+    
      border-radius: 22.5px;
      padding-left: 26px;
      padding-right: 25px;
      border-color: orange;
      text-align: center;
      background-color: white;
-
+     margin-right: 280px;
+     
 
 }
 button a{
@@ -153,28 +162,42 @@ button a{
 
 
 
+/*arreglar */
+
 /*grid*/
 
 .grid{
 
-    width: 320px;
-    height:100%  ;
+    width: 100%;
+    /*height:100%  ;*/
     margin: 0;
     display: grid;
     grid-template-columns:  repeat(3, 1fr);
-    grid-template-rows: 124.8px  124.8px 124.8px 124.8px ; 
     grid-gap: 10px;
     background-color: rgb(232, 241, 245);
        
 }
+
+@media screen and (max-width:480px) {
+
+          .grid div{
+
+            grid-column-start: 1;
+            grid-column-end: 4; 
+
+
+          }
+
+}
+
+
 
 .grid div{
     
     
     align-items: center;
     text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 4; 
+    
 }
 
 
@@ -189,10 +212,12 @@ button a{
     font-weight: 20px;
     font-family:'Roboto Slab', serif ;
     padding-top:  10px;
+    height: 20%;
 
 }
-
+/*arreglar el link button*/
 .grid footer{
+    width: 100%;
     height:124.8px; 
     grid-column-start: 1;
     grid-column-end: 4;
@@ -227,8 +252,7 @@ button a{
 
     width: 45px;
     height: 45px;
-    margin-left: 138px;
-    margin-right: 137px;
+    margin-left: 47%;
     margin-top: -20px;
     background-color: white;
     border-radius: 50px;   
@@ -238,20 +262,31 @@ button a{
 
 footer{
     position: relative;
-    width: 320px;
-    height: 465px;
+    width: 100%;
+    /*height: 465px;*/
     background-color: rgb(72, 72, 149);
 
 }
 
 nav{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
-
-
+    justify-content: center;
+    column-gap: 10%;
 }
+
+ @media screen and (max-width:480px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+        
+    }
+    
+
 
 .ul1{
     list-style: none;
@@ -299,4 +334,6 @@ nav{
     text-align: center;
 
 }
+
+/*responsive*/
 
